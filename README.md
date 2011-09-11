@@ -32,16 +32,16 @@ $ mdpage -t index.tp -m index.md -o index.html
 
 A simple template file for example:
 
-  <html>
-  <head>
-    <title>Hello world</title>
-  </head>
-  <body>
+    <html>
+    <head>
+      <title>Hello world</title>
+    </head>
+    <body>
 
-  @markdown
+    @markdown
 
-  </body>
-  </html>
+    </body>
+    </html>
 
 Out put of the markdown file will be inserted at the position where @markdown lies.
 

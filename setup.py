@@ -7,7 +7,7 @@ from distutils.core import setup
 
 setup(name='markdownpage',
       version='',
-      description='A program that generates html pages with template files and markdown files as input.',
+      description='A program that generates html page with template file and markdown file as input.',
       author='houqp',
       author_email='qingping.hou@gmail.com',
       url='https://github.com/houqp/markdownpage',
