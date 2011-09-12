@@ -35,12 +35,12 @@ def read_args():
   desc = "MarkdownPage (mdpage) - a simple html page generator."
   parser = argparse.ArgumentParser(description=desc)
 
-  parser.add_argument('-t', '--template-file', type=str, \
-      metavar='template_file', dest='tp', action='store', \
+  parser.add_argument('-t', '--template-file', type=str, 
+      metavar='template_file', dest='tp', action='store', 
       required=True, help="path for template file.")
 
-  parser.add_argument('-o', '--output-file', type=str, \
-      metavar='output_file', dest='html_file', action='store', \
+  parser.add_argument('-o', '--output-file', type=str, 
+      metavar='output_file', dest='html_file', action='store', 
       required=True, help="path for output html file.")
 
   args = parser.parse_args()
