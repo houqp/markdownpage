@@ -1,7 +1,10 @@
 MarkdownPage (mdpage)
 =====================
 
-A simple html page generator which takes a template file and markdown file as input.
+A simple html page generator which takes a template file as input.
+
+This script enable you to warp the output of markdown file in html tags you want, so you can write html page with markdown syntax more quickly.
+
 
 Dependencies
 ------------
@@ -24,10 +27,10 @@ $ sudo python setup.py install
 Usage
 -----
 
-Assume that your template file is index.tp and markdown file is index.md, issue following command to generate index.html:
+Assume that your template file is index.tp, issue following command to generate index.html:
 
 ```bash
-$ mdpage -t index.tp -m index.md -o index.html
+$ mdpage -t index.tp -o index.html
 ```
 
 A simple template file for example:
@@ -39,13 +42,23 @@ A simple template file for example:
 </head>
 <body>
 
-@markdown
+  <article>
+@main.md
+  </article>
+
+  <footer>
+@foot.md
+  </footer>
 
 </body>
 </html>
 ```
 
-Out put of the markdown file will be inserted at the position where @markdown lies.
+Output of main.md file will be inserted in the place where @main.md lies. So will the output of foot.md be inserted in @foot.md.
+
+`foot.md` and `main.md` should be placed in the same directory with `index.tp`.
+
+As you can see, every markdown file name begins with a `@` sign. That's all.
 
 
 
