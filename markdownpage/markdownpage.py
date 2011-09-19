@@ -3,11 +3,12 @@
 
 import markdown2
 import argparse
+import codecs
 
 
 class MarkdownParser():
   def __init__(self, tp):
-    self.f_tp = open(tp)
+    self.f_tp = codecs.open(tp,mode="r",encoding="utf8")
 
   def get_page(self):
     page = ''
@@ -49,7 +50,7 @@ def read_args():
 def main():
   args = read_args()
   mp = MarkdownParser(args.tp)
-  f_html = open(args.html_file,'w')
+  f_html = codecs.open(args.html_file,'w',encoding="utf8")
   f_html.write(mp.get_page())
   f_html.close()
 
