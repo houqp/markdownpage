@@ -9,7 +9,7 @@ This script enable you to warp the output of markdown file in html tags you want
 Dependencies
 ------------
 
-You need to install `markdown2` library.
+You need to install `markdown` library.
 
 You will also need to install `argparse` library if you use python with version lower than 2.7.
 

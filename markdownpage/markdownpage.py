@@ -1,7 +1,7 @@
 #!/usr/bin/env/ python
 # -*- coding: utf-8 -*-
 
-import markdown2
+import markdown
 import argparse
 import codecs
 
@@ -23,7 +23,7 @@ class MarkdownParser():
         except IOError:
           print 'Cannot find markdown file \"%s\"!!' % md_file
           exit(0)
-        page += markdown2.markdown(fd.read())
+        page += markdown.markdown(fd.read(), ['fenced_code'])
         continue
       page += line
     return page
