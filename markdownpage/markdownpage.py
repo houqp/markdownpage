@@ -8,7 +8,7 @@ import codecs
 
 class MarkdownParser():
   def __init__(self, tp):
-    self.f_tp = codecs.open(tp,mode="r",encoding="utf8")
+    self.f_tp = codecs.open(tp, mode="r", encoding="utf8")
 
   def get_page(self):
     page = ''
@@ -19,7 +19,7 @@ class MarkdownParser():
       elif line[0] == '@':
         md_file = line[1:-1]
         try:
-          fd = open(md_file, 'r')
+          fd = codecs.open(md_file, mode='r', encoding="utf8")
         except IOError:
           print 'Cannot find markdown file \"%s\"!!' % md_file
           exit(0)
@@ -50,7 +50,7 @@ def read_args():
 def main():
   args = read_args()
   mp = MarkdownParser(args.tp)
-  f_html = codecs.open(args.html_file,'w',encoding="utf8")
+  f_html = codecs.open(args.html_file, mode='w', encoding="utf8")
   f_html.write(mp.get_page())
   f_html.close()
 
